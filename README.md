@@ -7,6 +7,7 @@ Using the Pennylane Continuous-Variable Neural Network, several different machin
 - Simple classification (Iris dataset)
 - Solving a linear ODE
 - Solving a non-linear ODE
+- A Convolutional neural network is implemented and the transform is compared to the theoretical transform. It has a too high error, to be useful at the moment.
 
 Uses the Python package PennyLane:
 
