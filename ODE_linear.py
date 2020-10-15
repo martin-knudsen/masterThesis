@@ -209,7 +209,7 @@ x_data = x_data.view(20,1)
 # In[20]:
 
 
-def tangens_wrapper(x, params):
+def sigmoid_wrapper(x, params):
     phi_x = torch.zeros(M)
     wires=[i for i in range(M)]
     weight1 = torch.tensor([[1.],[1.],[1.]],dtype=torch.float64)
@@ -217,7 +217,7 @@ def tangens_wrapper(x, params):
     x_array=torch.nn.functional.linear(x, weight1, bias=None)
     circ_output = quantum_circ(params,x_array, wires=wires, phi_x=phi_x)
     summ=torch.nn.functional.linear(circ_output, weight2, bias=None)
-    classic_calc = torch.tanh(summ)
+    classic_calc = torch.sigmoid(summ)
     return classic_calc
 
 
